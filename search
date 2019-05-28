@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
 
-import argparse
-import json
-import os
 import subprocess
 
 subprocess.run("python -u -m replicability.run.rank".split())
