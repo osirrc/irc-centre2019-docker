@@ -11,7 +11,7 @@ The run argument has to be either "wcrobust04" or "wcrobust0405".
 
 ```
 python run.py prepare \
-    --repo breuert/wcrobust0405 \
+    --repo osirrc/wcrobust0405 \
     --collections robust04=/path/=trectext \
                   robust05=/path/=trectext \
                   core17=/path/=trectext \
@@ -24,7 +24,7 @@ Depending on specified run in the previous step, an output file named "wcrobust0
 
 ```
 python run.py search \
-    --repo breuert/wcrobust0405 \
+    --repo osirrc/wcrobust0405 \
     --collection core17 \
     --topic topics/topics.core17.txt \
     --output /path/to/output/ \
