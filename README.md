@@ -66,7 +66,7 @@ The `init` [script](init) will download the code from a [repository](https://git
 
 ### index
 
-The `index` [script](index) runs a subprocess with starts indexing.
+The `index` [script](index) runs a subprocess which starts indexing.
 
 ### search
 
