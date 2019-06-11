@@ -50,7 +50,10 @@ python run.py search \
 
 ## Expected Results
 
-TODO: add outcomes
+|Run | MAP | P@10 | P@30 |
+|---|---|---|---|
+|WCRobust04| 0.2971| 0.6820| 0.5613|
+|WCRobust0405| 0.3539| 0.7360| 0.6347|
 
 ## Implementation
 
