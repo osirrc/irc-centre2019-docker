@@ -1,6 +1,6 @@
 # IRC-CENTRE2019 Docker Image
 
-TODO: Travis
+[![Build Status](https://travis-ci.com/osirrc/irc-centre2019-docker.svg?branch=master)](https://travis-ci.com/osirrc/irc-centre2019-docker)
 
 [**Timo Breuer**](https://github.com/breuert/) and [**Philipp Schaer**](https://github.com/phschaer/)
 
