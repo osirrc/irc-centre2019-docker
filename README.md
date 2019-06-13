@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.com/osirrc/irc-centre2019-docker.svg?branch=master)](https://travis-ci.com/osirrc/irc-centre2019-docker)
 [![Docker Build Status](https://img.shields.io/docker/cloud/build/osirrc2019/irc-centre2019.svg)](https://hub.docker.com/r/osirrc2019/irc-centre2019)
+TODO: Add DOI badge
 
 [**Timo Breuer**](https://github.com/breuert/) and [**Philipp Schaer**](https://github.com/phschaer/)
 
