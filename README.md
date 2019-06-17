@@ -81,4 +81,4 @@ The `index` [script](index) runs a subprocess which starts indexing.
 The `search` [script](search) will start the ranking depending on the previously specified run.
 
 ## Reviews
-+ Documentation reviewed at commit [`078dbec`](https://github.com/osirrc/irc-centre2019-docker/commit/c90d336b0ad7f9aa4db294a440b10fee3078dbec) (2019-06-14) by [r-clancy](https://github.com/r-clancy/).
++ Documentation reviewed at commit [`078dbec`](https://github.com/osirrc/irc-centre2019-docker/commit/c90d336b0ad7f9aa4db294a440b10fee3078dbec) (2019-06-14) by [Ryan Clancy](https://github.com/r-clancy/).
