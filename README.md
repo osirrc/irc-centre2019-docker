@@ -22,6 +22,7 @@ The following `jig` command can be used to index the New York Times corpus and p
 ```
 python run.py prepare \
     --repo osirrc2019/irc-centre2019 \
+    --tag v0.1.3 \
     --collections robust04=/path/to/robust04/=trectext \
                   core17=/path/to/core17/=trectext \
     --opts run="wcrobust04"
@@ -33,6 +34,7 @@ In this case, the `robust05` corpus has to be mounted as an additional volume.
 ```
 python run.py prepare \
     --repo osirrc2019/irc-centre2019 \
+    --tag v0.1.3 \
     --collections robust04=/path/to/robust04/=trectext \
                   robust05=/path/to/robust05/=trectext \
                   core17=/path/to/core17/=trectext \
@@ -44,6 +46,7 @@ The following `jig` command can be used to perform a retrieval run on the New Yo
 ```
 python run.py search \
     --repo osirrc2019/irc-centre2019 \
+    --tag v0.1.3 \
     --collection core17 \
     --topic topics/topics.core17.txt \
     --output /path/to/output/ \
@@ -76,3 +79,6 @@ The `index` [script](index) runs a subprocess which starts indexing.
 ### search
 
 The `search` [script](search) will start the ranking depending on the previously specified run.
+
+## Reviews
++ Documentation reviewed at commit [`078dbec`](https://github.com/osirrc/irc-centre2019-docker/commit/c90d336b0ad7f9aa4db294a440b10fee3078dbec) (2019-06-14) by [Ryan Clancy](https://github.com/r-clancy/).
