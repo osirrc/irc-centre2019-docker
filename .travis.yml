@@ -1,5 +1,14 @@
+language: minimal
 services:
-  - docker
-
+- docker
 script:
-  - 'docker build . -t irc-centre2019-wcrobust0405'
+- docker build -t "$REPO":${TRAVIS_TAG:-latest} .
+after_success:
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+- if [[ ( "$TRAVIS_BRANCH" == "master" ) || ( -n "$TRAVIS_TAG" ) ]]; then docker push
+  "$REPO":${TRAVIS_TAG:-latest}; fi
+env:
+  global:
+  - REPO=osirrc2019/irc-centre2019
+  - secure: GutRQqrD3Kn2eX1xNYo6/RePOqJtCkHqQgw6KNEJh097BrUpQNFkbZ65zjrLZS2Hp9hHh5/wagrD93LJcDkz9OrnJOJCId7N2XslrBYdaSnR3NllGKUcR1cJwdECt8kZSry+aZrjwGkX4gvSnMKbYMC9CDvmmcrDDNiUBNbteD3snUwrgn5MsNBm5LyOpqXOAKEBpG64F1SujmB2mL/xhotcQ4mHcI4F3VWsjEd8oqydWEcMiVGCUJwqTTnUPAkFqlvUrcsjympXdzgnJPba/8+EzQM14mVJYl3j8e642ZZNVpY123NGBxCphuMzQt63YEnNbHKOm/Vdg7f7pgI6MvX4NK2IvirRXBbZaSEEjcoeg15JCcGm5JDZ0r3N6iJ/0oPcykTmjz4UKE00/i9jgnSwojVJRmnNoFtcCgyUBS6+94uVyIoAaR6jFqx+Sdj/rmERohefZVp8xxjTtKz21uHIMykUtsPYsHERKUoY6CsvRRVV6+pCVFqj4iaW2QqE1duNIpfCa90N8/ForUQpY+trOXmn6zZ7bS/TRMscYjQ3r8BG0wiExp5yGUbhrQLlgbN7jQM0TP8jUhgInWjhyaSmHgANpbsH2kE/xQ2i0M182c5kQhKWG7zXuXCgcsPH6xyy8yq8iYcz6LC+ALfedMwBRNQoMGOlPwevV0tlwPY=
+  - secure: cWdZcDJGOKtIAX+1b88K5JA7OhD1VCQXAPbOQCQ/pAlRQzQ2ncr9FX+u8QB1m75+/Dn8CeYwREJGkVVsnGnnj+LGHrOb9xMjHrMfCrQwph4EMGutoBx71CT7onXN4zZ4Z67nDpDYbT4nK2n8zN0vwg274g0KKK4WPuHwDj9Qn0SHAMMaCAKZJIm9I7NGjnzDizsQNX5L+J3d0ci1eMufsHalElbsztQ1V5zbKBOBCYybDOktgBbIr7/uQjZaCxnjiWjFOFPY+awMFQ5wqZXBy3162WM2YMUtspMgyNn4GQ1oUlAZQShQhcsHvOhoP7d/vcjQI355vWi3u45im6+explXCQmQMTTDq+mYzxWbvziydy9CQg7ISDmM3btoq3CmC8YnMY0xdQSAYOw9P/m0wEz29XPzWqDXvET6tFqGezTF/yyKporNnNzqfVSP/HK/Ldn6lXabPmwtrvrHyqkG4helfL6M1AlyMdVyQYBhKayDg681RgIZw7lmyq0TFP64JMWVCip4YTzQYZfiupchh6gJiewbsLilpYzkHnoI/CRwRJ80/e2XnXAC5AcNtsm+mQqgMZfrhs7ux3a9Yt/OiZE860cG8x2krb+P/BEZQTDqduNbP3MQNgjaxhwGk+kemNzzot1cJ412/HM4wlNDl8HoimptfDnB3Jw8CKcbELI=
